@@ -1,13 +1,14 @@
-#include "Planner.h"
+#include "MainWindow.h"
 
-Planner::Planner(QWidget *parent)
-    : QMainWindow(parent)
-{
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent) {
     ui.setupUi(this);
+
+    resize(initWidth, initHeight);
+    setWindowTitle("Planner");
+    setWindowIcon(QIcon("img\\windowIcon.png"));
+
+    this->setCentralWidget(centralWidget);
 }
 
-Planner::~Planner() {};
-
-
-
-
+MainWindow::~MainWindow() {};

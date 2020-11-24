@@ -7,13 +7,13 @@ namespace Ui {
     class Planner;
 }
 
-class Planner : public QMainWindow
+class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit Planner(QWidget* parent = Q_NULLPTR);
-    ~Planner();
+    explicit MainWindow(QWidget* parent = Q_NULLPTR);
+    ~MainWindow();
 
 private:
     Ui::PlannerClass ui;
