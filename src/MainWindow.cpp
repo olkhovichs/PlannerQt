@@ -5,3 +5,9 @@ Planner::Planner(QWidget *parent)
 {
     ui.setupUi(this);
 }
+
+Planner::~Planner() {};
+
+
+
+
