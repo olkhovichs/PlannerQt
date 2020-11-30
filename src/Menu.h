@@ -1,22 +1,22 @@
 #pragma once
 
+#include "ui_Planner.h"
+#include "MainWindow.h"
+
 #include <QWidget>
 #include <QMenu>
 #include <QAction>
+#include <QMenuBar>
 
-namespace Ui {
-	class Menu;
-}
-
-class Menu : public QWidget {
+class Menu : public QWidget, public MainWindow {
 	Q_OBJECT
 
 public:
-	explicit Menu();
+	explicit Menu(QWidget* parent = Q_NULLPTR);
 	~Menu();
 
-private:
-	QMenu* menu = new QMenu;
+	void setMenuBar();
 
-	QAction* quitAll = new QAction("Quit", this);
+	QMenu* menuPlanner = new QMenu;
+	QAction* quitAll = new QAction("Quit");
 };

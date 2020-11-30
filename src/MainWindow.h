@@ -1,14 +1,16 @@
 #pragma once
 
 #include <QtWidgets/QMainWindow>
+
+#include <QPalette>
+
 #include "ui_Planner.h"
 
 namespace Ui {
-    class Planner;
+    class MainWindow;
 }
 
-class MainWindow : public QMainWindow
-{
+class MainWindow : public QMainWindow {
     Q_OBJECT
 
 public:
