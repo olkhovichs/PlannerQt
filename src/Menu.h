@@ -15,7 +15,7 @@ public:
 	explicit Menu(QWidget* parent = Q_NULLPTR);
 	~Menu();
 
-	void setMenuBar();
+	virtual void setMenuBar();
 
 	QMenu* menuPlanner = new QMenu;
 	QAction* quitAll = new QAction("Quit");

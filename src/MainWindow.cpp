@@ -1,7 +1,7 @@
 #include "MainWindow.h"
 #include "Menu.h"
 
-MainWindow::MainWindow(QWidget *parent)
+MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent) {
     ui.setupUi(this);
 
@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     setWindowIcon(QIcon("img\\windowIcon.png"));
 
     this->setCentralWidget(centralWidget);
-    
+
     Menu menuBar;
     menuBar.setMenuBar();
 
