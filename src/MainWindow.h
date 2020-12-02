@@ -1,8 +1,10 @@
 #pragma once
 
 #include <QtWidgets/QMainWindow>
-
 #include <QPalette>
+#include <QMenuBar>
+#include <QAction>
+#include <QPushButton>
 
 #include "ui_Planner.h"
 
@@ -24,4 +26,9 @@ private:
     static const int initHeight = 720;
 
     QWidget* centralWidget = new QWidget;
+
+    QMenu* menuPlanner = new QMenu;
+    QAction* quitPlanner = new QAction("Quit");
+   // QPushButton* quitButton;
+    void setMenuBar();
 };

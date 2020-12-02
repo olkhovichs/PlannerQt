@@ -1,5 +1,4 @@
 #include "MainWindow.h"
-#include "Menu.h"
 
 MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent) {
@@ -11,15 +10,23 @@ MainWindow::MainWindow(QWidget* parent)
 
     this->setCentralWidget(centralWidget);
 
-    Menu menuBar;
-    menuBar.setMenuBar();
+    setMenuBar();
+
+
+
 
     // set background color 
     /*QPalette pal(palette());
     pal.setColor(QPalette::Background, Qt::black);
     centralWidget->setAutoFillBackground(true);
     centralWidget->setPalette(pal);*/
-
 }
 
 MainWindow::~MainWindow() {}
+
+void MainWindow::setMenuBar() {
+    menuPlanner = menuBar()->addMenu("Planner");
+    menuPlanner->addAction(quitPlanner);
+    connect(quitPlanner, &QAction::triggered, qApp, QApplication::quit);
+    //connect(quitButton, &QPushButton::clicked, qApp, &QApplication::quit);
+}
